@@ -1,0 +1,17 @@
+{
+  "name": "jarbas",
+  "description": "A voice powered shopping assistant.",
+  "author": "Lawrence Braun",
+  "contributors": "Miguel Pescadinha, Marco Justo",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "version": "1.0",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "meteor-node-stubs": "~0.2.0",
+    "nlp_compromise": "^6.5.1",
+    "request": "^2.75.0"
+  }
+}

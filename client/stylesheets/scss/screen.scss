@@ -1,0 +1,236 @@
+@import "_variables";
+@import "_toastr";
+@import "_publicHome";
+
+//Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body{
+	overflow-x: hidden!important;
+}
+
+.background{
+	color: white;
+	&.pink{
+		background-color: #F50057;
+	}
+	&.purple{
+		background-color: #651FFF;
+	}
+	&.red{
+		background-color: #FF1744;
+	}
+	&.green{
+		background-color: #1DE9B6;
+	}
+	&.blue{
+		background-color: #3D5AFE;
+	}
+}
+
+.pink{
+	background-color: #F50057;
+	color: #fff;
+}
+.purple{
+	background-color: #651FFF;
+	color: #fff;
+}
+.red{
+	background-color: #FF1744;
+	color: #fff;
+}
+.green{
+	background-color: #1DE9B6;
+	color: #fff;
+}
+.blue{
+	background-color: #3D5AFE;
+	color: #fff;
+}
+
+.padded{
+	padding: 15px;
+}
+
+#helpModalBtn{
+	position: absolute;
+    top: 15px;
+    border-radius: 0;
+    font-size: 1.5em;
+    z-index: 500;
+}
+
+.main-area{
+	text-align: center;
+	margin: 40px auto 0;
+}
+
+.mic-button{
+	display: block;
+	font-size: 3em;
+	color: #CCC;
+	.fa-microhpone-slash{
+		color: #CCC
+	}
+	.fa-microphone{
+		color: #337ab7;
+	}
+	&:active{
+		.fa-microhpone-slash{
+			color: #CCC;
+		}
+	}
+}
+
+.result-area{
+	text-align: center;
+	padding: 5px 15px;
+	font-size: 1.6em;
+	margin-bottom: 15px;
+	.final{
+		color: black;
+		p{
+			display: inline-block;
+			margin: 0 5px 15px;
+		}
+		small{
+			display: table-cell;
+			font-size: .5em;
+		}
+	}
+	.interim{
+		color: grey;
+	}
+}
+
+#resultArea{
+	margin: 0 25px;
+}
+
+#shoppingList{
+	position: fixed;
+	right: -500px;
+	background: grey;
+	width: 450px;
+	top: 10px;
+	transition: right .5s;
+	z-index: 1000;
+	background: #651FFF;
+	color: #FFF;
+	padding: 15px;
+	&.show{
+		right: 0px;
+		transition: right .5s;
+	}
+	ul{
+		//padding: 0;
+		li{
+			//list-style-type: none;
+			font-size: 1.2em;
+		}
+	}
+	.total{
+		text-align: right;
+		position: relative;
+		bottom: auto;
+		right: auto;
+	}
+
+	@media (max-width: $xsmall-screen){
+		width: 100%;
+		height: 100%;
+		top: 0;
+		.total{
+			position: absolute;
+			bottom: 25px;
+			right: 25px;
+		}
+	}
+}
+
+.product-display-name{
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  margin-top: 5px;
+  font-size: .6em;
+  text-align: left;
+  color: #757575;
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.product-price{
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  background: #F50057;
+  color: white;
+  margin: 0 18px;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: .6em;
+}
+
+.badge-wrapper{
+	.badge{
+		border-radius: 0; 
+	}
+}
+
+/* Tiles */
+
+.tile {
+	position: relative;
+	float: left;
+	width: 250px;
+	height: 250px;
+	background: #fff;
+	margin: 0 10px 10px 0;
+	padding-top: 25px;
+	opacity:0;
+	text-align: center;
+	font-size: 3em;
+	color: #333;
+	cursor: pointer;
+	border: 1px solid #eee;
+	border-radius: 4px;
+	&.move{
+		top: -200px;
+		left: -200px;
+	}
+	&.show{
+		opacity: 1;
+		top: 0;
+		left: 0;
+	}
+	&:hover {  
+		transform-origin: center;
+		/*transform: scale(1.008);*/
+		box-shadow: 0px 0px 40px 1px rgba(155, 155, 155,0.48);
+		z-index: 10;
+		transition: .5s transform, .5s box-shadow;
+	}
+	
+	@media (max-width: $xsmall-screen){
+		width: 80%;
+	}
+
+ }
+
+
+/*
+@media (min-width: $large-screen-up){
+	background: red;
+}
+
+@media (min-width: $medium-screen) and (max-width: $large-screen){
+	background: green;
+}
+
+@media (max-width: $medium-screen){
+	background: orange;
+}
+*/
