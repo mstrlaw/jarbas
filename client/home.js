@@ -10,6 +10,8 @@ Template.home.onRendered(function(){
 	var resultArea = $('#resultArea');
 	Session.set('last_input_timestamp', moment().utc().unix());
 
+	$('body').css({'background': '#FFF'});
+
 	/*
 	Meteor.setTimeout(function(){
 		$('#resultArea').masonry({
